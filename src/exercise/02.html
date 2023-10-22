@@ -15,9 +15,8 @@
     const rootElement = document.getElementById('root')
     const elementProps = {children: 'Hello World', className: 'container'}
     const reactElement = React.createElement('div', elementProps)
-    const root = ReactDOM.createRoot(rootElement)
-    rootElement.append(reactElement)
-    root.render(reactElement)
+
+    ReactDOM.render(reactElement, rootElement)
   </script> -->
 
   <script>
@@ -34,12 +33,12 @@
       reactESpan2,
     )
 
-    const rootElement = React.createElement(
+    const rootElement2 = React.createElement(
       'div',
       {id: 'root'},
       reactEDivContainer,
     )
 
-    ReactDOM.render(rootElement, document.body)
+    ReactDOM.render(rootElement2, document.body)
   </script>
 </body>
