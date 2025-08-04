@@ -1,15 +1,25 @@
 <html>
 	<body>
-		<div id="root">
-			<script type="module">
-				const rootElement = document.getElementById('root')
-				const element = document.createElement('div')
+		<!-- 💣 delete this element (we'll make it with JS instead) -->
 
-				element.className = 'container'
-				element.textContent = 'Hello World of React'
+		<script type="module">
+			// 🐨 rather than getting the element from the DOM created by the HTML
+			// create the root element like you do the hello world element
+			// 🐨 you can even add the id to the root element if you like
 
-				rootElement.append(element)
-			</script>
-		</div>
+			const rootElement = document.createElement('div')
+			rootElement.id = 'root'
+			document.body.append(rootElement)
+
+			const element = document.createElement('div')
+			element.className = 'container'
+			element.textContent = 'Hello World Exercise 2'
+
+			rootElement.append(element)
+			// 🐨 add the rootElement to the document.body
+		</script>
+
+		<!-- this is here to add automatic browser reloading as you save your work -->
+		<script type="module" src="epic_ws.js"></script>
 	</body>
 </html>
