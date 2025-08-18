@@ -9,10 +9,7 @@
 			const rootElement = document.getElementById('root')
 
 			// 🐨 With babel compiling this code, you can now re-implement this using JSX!
-			const element = React.createElement('div', {
-				className: 'container',
-				children: 'Hello JSX',
-			})
+			const element = <div className="container">Hello JSX with JSX</div>
 
 			createRoot(rootElement).render(element)
 		</script>
