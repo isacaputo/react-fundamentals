@@ -17,15 +17,23 @@
 			// 	</ul>
 			// </div>
 
-			const element = createElement(
+			const ulChildren = [
+				createElement('li', null, 'Green eggs'),
+				createElement('li', null, 'Ham'),
+			]
+
+			const mainDivChildren = [
+				createElement('p', null, "Here's Sam's favorite food:"),
+				createElement('ul', { className: 'sams-food' }, ulChildren),
+			]
+
+			const mainDiv = createElement(
 				'div',
 				{ className: 'container' },
-				createElement('span', null, 'Hello'),
-				' ',
-				createElement('span', null, 'World'),
+				mainDivChildren,
 			)
 
-			createRoot(rootElement).render(element)
+			createRoot(rootElement).render(mainDiv)
 		</script>
 
 		<!-- this is here to add automatic browser reloading as you save your work -->
